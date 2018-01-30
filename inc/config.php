@@ -1,10 +1,14 @@
 
 <?php
 	$server    = 'localhost';
-	$user    = 'root';
-	$pass    = '';
+	$user    = 'dbuser1';
+	$pass    = 'LWu_LH]CY_rOvcdZ]xDxcjX9XClUMrCo';
 	$db    = 'chat';
-	$table    = 'chattext';
-	$mysql = new mysqli($server, $user,$pass, $db);
+	
+        $mysql = new mysqli($server, $user, $pass, $db);
+        if (mysqli_connect_errno()) {
+            printf("Verbindung fehlgeschlagen: %s\n", mysqli_connect_error());
+            exit();
+        }
 	
 ?> 
